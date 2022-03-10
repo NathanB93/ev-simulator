@@ -1,0 +1,185 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: white;
+
+  grid-template: 1fr 9fr/2fr 8fr;
+
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+
+  grid-template-areas:
+    "header header"
+    "sidepanel resultspanel";
+}
+
+.header {
+  grid-area: header;
+  background-color: black;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+.navbar h1 {
+  color: white;
+  margin-left: 16px;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.sidepanel {
+  grid-area: sidepanel;
+  width: 20vw;
+  max-height: 100%;
+}
+.resultspanel {
+  grid-area: resultspanel;
+  width: 100%;
+  height: 90vh;
+}
+
+.configpanel {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+    "networkcontainer"
+    "nodelist";
+  width: 20vw;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.network {
+  grid-area: networkcontainer;
+  height: 30vh;
+
+  max-height: 30vh;
+  display: table;
+  margin-left: 16px;
+}
+
+.network p {
+  display: table-row;
+}
+
+.network h1 {
+  font-size: 30px;
+}
+
+.networklabel {
+  display: table-cell;
+  margin-right: 16px;
+}
+
+.namelabel {
+  display: table-cell;
+}
+
+.currentlabel {
+  display: table-cell;
+}
+
+.networkselect {
+  display: table-cell;
+  width: 7vw;
+}
+
+.nameinput {
+  width: 7vw;
+  display: table-cell;
+}
+
+.currentinput {
+  width: 7vw;
+  display: table-cell;
+}
+.cancel {
+  display: table-cell;
+}
+.confirm {
+  display: table-cell;
+}
+
+.confirmed {
+  color: green;
+  font-size: 20px;
+  display: table-cell;
+}
+
+.nodelist {
+  grid-area: nodelist;
+  width: 20vw;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.nodeheader {
+  font-size: 5vh;
+
+  color: white;
+  width: 100%;
+  background: black;
+  text-align: center;
+}
+
+.node {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.node h1 {
+  margin-left: 16px;
+  font-size: 20px;
+}
+.node h2 {
+  margin-left: 16px;
+  font-size: 15px;
+}
+
+.evmenu {
+  margin-left: 16px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid black;
+  justify-content: space-evenly;
+}
+
+.chart {
+  height: 40%;
+  width: 80%;
+}
+.controlpanel {
+  display: flex;
+  margin-top: 12vh;
+  margin-right: 30vw;
+}
+.runbutton {
+  margin-left: 4vw;
+  height: 6vh;
+  width: 7vh;
+}
+.stopbutton {
+  margin-left: 0.2vw;
+  height: 6vh;
+  width: 7vh;
+}
+
+.statuslabel {
+  margin-left: 5vh;
+  font-size: 4vh;
+}
